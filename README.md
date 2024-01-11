@@ -1,5 +1,9 @@
 # Laptop Price Prediciton
 
+![Laptop Price Prediciton](/imags/laptop-homepage.jpg "Laptop Price Prediciton")
+
+
+
 `Author:` Rogerio Chaves
 
 ## Description:
