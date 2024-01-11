@@ -2,10 +2,6 @@
 
 ![Laptop Price Prediciton](/imags/laptop-homepage.jpg "Laptop Price Prediciton")
 
-
-
-`Author:` Rogerio Chaves
-
 ## Description:
 
 This project aim to predict the laptop price. For this it use the [Laptop Price Dataset](https://www.kaggle.com/datasets/muhammetvarl/laptop-price) available on Kaggle. The dataset contains Y instaces with 12 columns (11 features and 1 target).
@@ -17,3 +13,8 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 ### Get the datasets
 
 ### Activate the virtual environment
+
+
+## Colaborators:
+
+`Rogerio Chaves`
