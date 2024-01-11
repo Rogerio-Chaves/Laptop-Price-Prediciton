@@ -7,6 +7,7 @@
 This project aim to predict the laptop price. For this it use the [Laptop Price Dataset](https://www.kaggle.com/datasets/muhammetvarl/laptop-price) available on Kaggle. The dataset contains 1303 instaces with 12 columns (11 features and 1 target).
 
 **Columns:**
+
 `Company:` Laptop Manufacturer</br>
 `Product:` Brand and Model</br>
 `TypeName:` Type (Notebook, Ultrabook, Gaming, etc.)</br>
