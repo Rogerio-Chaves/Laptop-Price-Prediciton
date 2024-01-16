@@ -26,7 +26,9 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 ## Project Structure
 
 	├── data <- Folder containing the dataset used in the project.
+	|
 	├── imgs <- Folder containing images used in the README file.
+	|
 	├── model <- Folder containing the model files.
 	|
 	├── Pipfile <- File for the virtual environment.
