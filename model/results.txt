@@ -1,0 +1,2 @@
+Laptop Price Prediction
+Training score: 0.9735132937642632Training RMSE: 113.52029386715006Testing score: 0.8791843576939344Testing RMSE: 243.74703884559224
