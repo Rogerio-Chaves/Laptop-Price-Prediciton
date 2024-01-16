@@ -23,7 +23,7 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 
 **Dataset author:** Muhammet Varli.
 
-## Project Structure
+## Project Structure:
 
 	├── data <- Folder containing the dataset used in the project.
 		└── laptop_price.csv <- full dataset.
@@ -34,19 +34,23 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 	│ 
 	├── model <- Folder containing the model files.
 		│
-		└── cpu_encoder.bin
+		└── cpu_encoder.bin <- CPU label encoder.
 		│
-		└── gpu_encoder.bin
+		└── gpu_encoder.bin <- GPU label encoder.
 		│
-		└── memory_encoder.bin
+		└── memory_encoder.bin <- Memory label encoder.
 		│
 		└── model.bin <- The trained model.
 		│
-		└── product_encoder.bin
+		└── product_encoder.bin <- Product label encoder.
 		│
 		└── relevant_columns.bin <- Relevant columns generates of the feature selection step.
 		│
-		└── 
+		└── resolution_encoder.bin <- Resolution label encoder.
+		│
+		└── results.txt <- Results of the model training.
+		│
+		└── typename_encoder.bin <- Typename label encoder.
 	│ 
 	├── Pipfile <- File for the virtual environment.
 	│ 
