@@ -67,7 +67,7 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 
 ## How to run this project:
 
-### Get the datasets
+### Get the dataset
 
 There are two ways to get the dataset:
 
@@ -76,6 +76,18 @@ There are two ways to get the dataset:
 
 ### Activate the virtual environment
 
+Open the terminal in the repository and set the command.
+
+<code>pip3 install pipenv</code>
+
+Install the libraries dependencies.
+
+
+<code>pipenv lock</code> Get the dependencies of the requirements.txt file.
+
+<code>pipenv install</code> Install the dependencies.
+
+<code>pipenv shell</code> Active virtual environment.
 
 ## Colaborators:
 
