@@ -100,25 +100,32 @@ test_rmse = np.sqrt(mean_squared_error(y_test, rf_model.predict(X_test)))
 
 ## Create dir to the model.
 MODEL_DIR = 'model'
-
 if not os.path.exists(MODEL_DIR):
     os.makedirs(MODEL_DIR)
     print('Directory was created!')
 
 # Save the results of the model.
-with open(f'{MODEL_PATH}/results.txt', 'w') as f:
+with open(f'{MODEL_DIR}/results.txt', 'w') as f:
 	l1 = 'Laptop Price Prediction'
 	l2 = '\n'
 	l3 = f'Training score: {train_score}'
-    l4 = f'Training RMSE: {train_rmse}'
+	l4 = f'Training RMSE: {train_rmse}'
 	l5 = f'Testing score: {test_score}'
-    l6 = f'Testing RMSE: {ttest_rmse}'
+	l6 = f'Testing RMSE: {test_rmse}'
 	f.writelines([l1, l2, l3, l4, l5, l6])
 
 # Save model.
 with open(f'{MODEL_DIR}/model.bin', 'wb') as f:
-    pickle.dump(model, f)
+    pickle.dump(rf_model, f)
     f.close()
+    
+# Save the test dataset.
+DATASETS_DIR = 'data'
+if not os.path.exists(DATASETS_DIR):
+    os.makedirs(DATASETS_DIR)
+    print('Datasets directory was created!')
+
+df_test.to_csv(f'{DATASETS_DIR}/test.csv', index=False)
 
 # Save label encoder objects.
 ## Save CPU encoder
