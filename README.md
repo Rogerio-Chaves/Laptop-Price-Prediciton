@@ -69,6 +69,11 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 
 ### Get the datasets
 
+There are two ways to get the dataset:
+
+- Original is available on the Kaggle in this <a href="https://www.kaggle.com/datasets/muhammetvarl/laptop-price">link</a>.
+- Data folder in this repository.
+
 ### Activate the virtual environment
 
 
