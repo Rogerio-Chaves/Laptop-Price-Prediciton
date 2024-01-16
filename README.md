@@ -26,21 +26,38 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 ## Project Structure
 
 	├── data <- Folder containing the dataset used in the project.
-	|
+		└── laptop_price.csv <- full dataset.
+		│
+		└── test.csv <- Test dataset used in the predict step.
+	│ 
 	├── imgs <- Folder containing images used in the README file.
-	|
+	│ 
 	├── model <- Folder containing the model files.
-	|
+		│
+		└── cpu_encoder.bin
+		│
+		└── gpu_encoder.bin
+		│
+		└── memory_encoder.bin
+		│
+		└── model.bin <- The trained model.
+		│
+		└── product_encoder.bin
+		│
+		└── relevant_columns.bin <- Relevant columns generates of the feature selection step.
+		│
+		└── 
+	│ 
 	├── Pipfile <- File for the virtual environment.
-	|
+	│ 
 	├── Pipfile.lock <- File for the virtual environment.
-	|
+	│ 
 	├── README.md
-	|
+	│ 
 	├── notebook.ipynb <- This notebook contains the preprocessing, EDA and model selection.
-	|
+	│ 
 	├── requirements <- This file contains the library dependencies of the project.
-	|
+	│ 
 	├── train.py <- Python script for the training step.
 
 
