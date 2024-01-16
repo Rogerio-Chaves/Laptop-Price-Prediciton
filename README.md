@@ -89,6 +89,18 @@ Install the libraries dependencies.
 
 <code>pipenv shell</code> Active virtual environment.
 
+#### Notebook file:
+
+With virtual environment activated, running the following command will create a kernel that can be used to run jupyter notebook commands inside the virtual environment.
+
+<code>ipython kernel install --user --name=venv</code>
+
+Finally, select the <b>venv</b> kernel in the notebook interface.
+
+#### Training Script file:
+
+With virtual environment activated, run the train script using this command <code>python3 train.py</code>
+
 ## Colaborators:
 
 `Rogerio Chaves`
