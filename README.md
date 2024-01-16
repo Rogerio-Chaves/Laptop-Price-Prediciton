@@ -26,20 +26,20 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 ## Project Structure
 
 	├── data <- Folder containing the dataset used in the project.
-	├── imgs <- Folder containing images used in the README
+	├── imgs <- Folder containing images used in the README file.
 	├── model <- Folder containing the model files.
 	|
-	├── Pipfile <- File of the virtual environment.
+	├── Pipfile <- File for the virtual environment.
 	|
-	├── Pipfile.lock <- File of the virtual environment.
+	├── Pipfile.lock <- File for the virtual environment.
 	|
 	├── README.md
 	|
-	├── notebook.ipynb <-
+	├── notebook.ipynb <- This notebook contains the preprocessing, EDA and model selection.
 	|
-	├── requirements <-
+	├── requirements <- This file contains the library dependencies of the project.
 	|
-	├── train.py <-
+	├── train.py <- Python script for the training step.
 
 
 ## How to run this project:
