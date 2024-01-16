@@ -25,21 +25,21 @@ This project aim to predict the laptop price. For this it use the [Laptop Price 
 
 ## Project Structure
 
-├── data <- Folder containing the dataset used in the project.
-├── imgs <- Folder containing images used in the README
-├── model <- Folder containing the model files.
-|
-├── Pipfile <- File of the virtual environment.
-|
-├── Pipfile.lock <- File of the virtual environment.
-|
-├── README.md
-|
-├── notebook.ipynb <-
-|
-├── requirements <-
-|
-├── train.py <-
+	├── data <- Folder containing the dataset used in the project.
+	├── imgs <- Folder containing images used in the README
+	├── model <- Folder containing the model files.
+	|
+	├── Pipfile <- File of the virtual environment.
+	|
+	├── Pipfile.lock <- File of the virtual environment.
+	|
+	├── README.md
+	|
+	├── notebook.ipynb <-
+	|
+	├── requirements <-
+	|
+	├── train.py <-
 
 
 ## How to run this project:
