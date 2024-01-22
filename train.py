@@ -1,5 +1,6 @@
 # Import libraries.
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 import re
@@ -52,6 +53,14 @@ resolution_encoder.fit(df['screenresolution'])
 # Train and test split.
 df_train, df_test = train_test_split(df, test_size=0.20, random_state=1)
 
+# Save the test dataset.
+DATASETS_DIR = 'data'
+if not os.path.exists(DATASETS_DIR):
+    os.makedirs(DATASETS_DIR)
+    print('Datasets directory was created!')
+
+df_test.to_csv(f'{DATASETS_DIR}/test.csv', index=False)
+
 # Change string values to numeric on training dataset.
 df_train.ram = df_train.ram.apply(to_numeric)
 df_train.weight = df_train.weight.apply(to_numeric)
@@ -67,8 +76,11 @@ df_train['screenresolution'] = resolution_encoder.transform(df_train['screenreso
 # Split predictors and target on training dataset.
 y_train = df_train.price_euros.values
 del df_train['price_euros']
-X_train = df_train.values
-X_train.shape, y_train.shape
+
+# Dict Vectorizer
+dicts = df_train.to_dict(orient='records')
+dv = DictVectorizer(sparse=False)
+X_train = dv.fit_transform(dicts)
 
 # Training the model
 rf_model = RandomForestRegressor(criterion='poisson', min_samples_leaf=1, min_samples_split=2, n_estimators=100)
@@ -116,17 +128,9 @@ with open(f'{MODEL_DIR}/results.txt', 'w') as f:
 
 # Save model.
 with open(f'{MODEL_DIR}/model.bin', 'wb') as f:
-    pickle.dump(rf_model, f)
+    pickle.dump((dv, rf_model), f)
     f.close()
     
-# Save the test dataset.
-DATASETS_DIR = 'data'
-if not os.path.exists(DATASETS_DIR):
-    os.makedirs(DATASETS_DIR)
-    print('Datasets directory was created!')
-
-df_test.to_csv(f'{DATASETS_DIR}/test.csv', index=False)
-
 # Save label encoder objects.
 ## Save CPU encoder
 with open(f'{MODEL_DIR}/cpu_encoder.bin', 'wb') as f:
