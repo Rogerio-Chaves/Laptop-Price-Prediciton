@@ -101,6 +101,12 @@ Finally, select the <b>venv</b> kernel in the notebook interface.
 
 With virtual environment activated, run the train script using this command <code>python3 train.py</code>
 
+#### Predict web service:
+
+With virtual environment activated, build the dockerfile using this command<code>sudo docker build -t predict .</code>
+
+Finally, run docker with this command <code>sudo docker run -it -p 9696:9696 predict:latest</docker>
+
 ## Colaborators:
 
 `Rogerio Chaves`
