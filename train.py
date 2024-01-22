@@ -1,6 +1,5 @@
 # Import libraries.
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 import re
@@ -76,11 +75,7 @@ df_train['screenresolution'] = resolution_encoder.transform(df_train['screenreso
 # Split predictors and target on training dataset.
 y_train = df_train.price_euros.values
 del df_train['price_euros']
-
-# Dict Vectorizer
-dicts = df_train.to_dict(orient='records')
-dv = DictVectorizer(sparse=False)
-X_train = dv.fit_transform(dicts)
+X_train = df_train.values
 
 # Training the model
 rf_model = RandomForestRegressor(criterion='poisson', min_samples_leaf=1, min_samples_split=2, n_estimators=100)
@@ -128,7 +123,7 @@ with open(f'{MODEL_DIR}/results.txt', 'w') as f:
 
 # Save model.
 with open(f'{MODEL_DIR}/model.bin', 'wb') as f:
-    pickle.dump((dv, rf_model), f)
+    pickle.dump((rf_model), f)
     f.close()
     
 # Save label encoder objects.
